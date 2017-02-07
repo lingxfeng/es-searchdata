@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+  <body>
+  
+	 <div th:fragment="footer">
+		<div class="container">
+			<div class="bottom-info">
+				<div class="web-info">
+					<div class="contact-title">关于我们</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="col-sm-6">
+									<a href="http://www.telecredit.cn/service.html#about"
+										target="_blank" title="关于我们">关于我们</a>
+								</div>
+								<div class="col-sm-6 text-left">
+									<a href="http://www.telecredit.cn/service.html#operate"
+										target="_blank" title="运营机构">运营机构</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="col-sm-6">
+									<a href="http://www.telecredit.cn/service.html#privacy"
+										target="_blank" title="隐私协议">隐私协议</a>
+								</div>
+								<div class="col-sm-6 text-left">
+									<a href="http://www.telecredit.cn/service.html#help"
+										target="_blank" title="帮助中心">帮助中心</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="col-sm-6">
+									<a href="http://www.telecredit.cn/service.html#opinition"
+										target="_blank" title="意见反馈">意见反馈</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contact-info">
+					<div class="contact-title">联系我们</div>
+					<div class="row">
+						<div class="col-sm-12">
+							在线咨询： <a class="qq-service" target="_blank"
+								href="http://wpa.qq.com/msgrd?v=3&amp;uin=3474248181&amp;site=qq&amp;menu=yes">
+								<img src="../static/images/qq.png?v=47c8160831" alt="qq咨询"
+								th:src="@{/images/qq.png}" title="点击QQ咨询" />
+							</a>
+						</div>
+						<div class="col-sm-12">QQ群：371997390</div>
+						<div class="col-sm-12">
+							合作邮箱：<a href="mailto:telecredit@telecredit.cn">telecredit@teleinfo.cn</a>
+						</div>
+					</div>
+				</div>
+				<div class="data-source">
+					<div class="contact-title">数据来源</div>
+					<div class="row">
+						<div class="col-sm-12">工业和信息化部ICP/IP地址/域名信息备案管理系统</div>
+						<div class="col-sm-12">
+							<span>全国企业信用公示系统</span> <span class="pull-right">
+								全球域名注册数据库&nbsp;&nbsp; </span>
+						</div>
+						<div class="col-sm-12 ">网上名称《标识证书》公示平台</div>
+					</div>
+				</div>
+				<div class="code-img">
+					<div class="contact-title">微信公众号</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<img src="../static/images/qr-code.png?v=9d8ff20487"
+								th:src="@{/images/qr-code.png}" alt="二维码" />
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="copy-right" >
+      &copy; 版权所有：<a href="http://www.caict.ac.cn" title="中国信息通信研究院"
+				target="_blank">中国信息通信研究院（CAICT）</a>、 <a
+				href="http://www.teleinfo.cn" title="北京泰尔英福网络科技有限责任公司"
+				target="_blank">北京泰尔英福网络科技有限责任公司（TELEINFO）</a>
+				<a href="http://www.miitbeian.gov.cn/" title="备案号" target="_blank">京ICP备12003601号</a>
+				</div>
+				
+		<script src="../static/js/lib/jquery.min.js"></script>
+		<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../static/js/lib/layer/layer.js"></script>
+		<script src="../static/js/lib/slick.js"></script>
+		<script src="../static/js/lib/jquery.twbsPagination.min.js"></script>
+		<script src="../static/js/detail/detail-base.js"></script>
+		<script src="../static/js/detail/detail-asset.js"></script>
+		<script src="../static/js/detail/detail-invest.js"></script>
+		<script src="../static/js/detail/detail-low.js"></script>
+		<script src="../static/js/detail/detail-new.js"></script>
+		<script src="../static/js/detail/detail-operate.js"></script>
+		<script src="../static/js/detail/detail-snap.js"></script>
+		<script src="../static/js/detail/detail-main.js"></script>
+		
+		<!-- <script src="../static/js/static.min.js?v=e200619e5b&amp;ak=3oXn72yEfVSqyjNhPuDX6eSLCHCxb91L"></script> -->
+	
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0"
+			th:src="@{http://api.map.baidu.com/api?v=2.0&amp;ak=3oXn72yEfVSqyjNhPuDX6eSLCHCxb91L}"></script>
+    </div>
+    
+   
+    <div th:fragment="js">
+     
+    </div>
+  </body>
+  
+</html>
+
