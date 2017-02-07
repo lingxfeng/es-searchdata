@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml"
+                   xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/header :: header"> </head>
+
+<body>
+	<header>
+		<div class="container">
+			<a class=" logo" href="http://www.telecredit.cn"> <img
+				src="../static/images/logo.png?v=197cb3a34a" />
+			</a>
+			<div id="no-login" class="login-state">
+				<!-- <a href="register.html">注册</a> <a href="login.html">登录</a> -->
+			</div>
+			<div id="already-login" class="login-state none">
+				<a id="user-center" href="javascript:void(0)"><span>您好，</span><span
+					id="user-name">18518135987</span><span><i
+						class="iconfont icon-xiala"></i></span></a>
+				<div id="header-list" class="header-list">
+					<i class="iconfont icon-xialalist"></i>
+					<ul>
+						<li><a href="">我的网信</a></li>
+						<li><a href="">我的关注</a></li>
+						<li><a href="setting.html">账号设置</a></li>
+						<li><a href="logout.html">退出登陆</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="main">
+		<div class="container">
+		<!-- 
+			<div class="module search-module">
+				<div class="module-content">
+					<div class="input-group search-wrap">
+						<input type="text" name="q" id="search-content"
+							class="form-control search-content"
+							placeholder=" 请输入企业名称、注册号、人名、商品名等" /> <span
+							class="input-group-btn">
+							<button type="submit" id="search" class="btn btn-search">搜索</button>
+						</span>
+					</div>
+					<div class="hot-word text-left">
+						<span>热搜词：</span> <a href="">雨绮老公袁巴元</a> <a href="">中通赴美上市</a> <a
+							href="">董明珠发飙</a> <a href="">锤子手机M1</a> <a href="">神奇百货</a>
+					</div>
+				</div>
+			</div>
+        -->
+			<div class="module">
+				<div class="module-content">
+					<div class="company-logo">
+						<img src="../static/images/companyInfo/default-logo.png"
+							 alt="" />
+					</div>
+					<div class="company-info">
+						<div class="company-name">
+							<h3 th:text="${dataMap.companyName}">北京泰尔英福网络科技有限责任公司</h3>
+							<input type="hidden" id="companyId"
+								th:value="${dataMap.companyId}" />
+							<input type="hidden" id="companyName"
+								th:value="${dataMap.companyName}" />
+						  
+							<div id="already-claim" class="claim-state">
+							</div>
+							<div id="no-claim" class="claim-state">
+							<span>未认领</span></div>
+						</div>
+						<div class="data-update">
+							数据更新日期：<span th:text="${dataMap.updateDt}">2016年11月11日</span>
+						<!-- 	<a href="javascript:void(0)">更新数据</a> -->
+						</div>
+						<div class="company-text">
+							<p th:text="'信用代码 : '+${dataMap.creditCode}"></p>
+							<p th:text="'网信地址 : '+${dataMap.domain}"></p>
+						</div>
+					</div>
+			<!-- <div id="already-focus" class="focus-status none">已关注</div>
+                <div id="no-focus" class="focus-status">关注</div> -->	
+				</div>
+			</div>
+
+			<div class="search-result">
+				<div class="left-content">
+					<ul id="myTab" class="nav nav-tabs left-content-nav">
+						<li><a href="#nav-readme" data-toggle="tab"
+							aria-expanded="true">企业自述</a></li>
+						<li><a href="#nav-base" data-toggle="tab"
+							aria-expanded="false">基本信息</a></li>
+						<li><a href="#nav-operate" data-toggle="tab">经营信息</a></li>
+						<li><a href="#nav-invest" data-toggle="tab">对外投资</a></li>
+						<li><a href="#nav-law" data-toggle="tab">法律诉讼</a></li>
+						<li><a href="#nav-intangible-assets" data-toggle="tab">数字资产</a></li>
+						<!-- <li><a href="#nav-news" data-toggle="tab">新闻舆情</a></li> -->
+					</ul>
+					<div class="tab-content">
+						<!--企业快照-->
+						<div id="nav-readme" class="tab-pane "></div>
+						<!--基本信息-->
+						<div id="nav-base" class="tab-pane "></div>
+						<!--经营信息-->
+						<div id="nav-operate" class="tab-pane "></div>
+						<!--对外投资-->
+						<div id="nav-invest" class="tab-pane "></div>
+						<!--法律诉讼-->
+						<div id="nav-law" class="tab-pane "></div>
+						<!--数字资产-->
+						<div id="nav-intangible-assets" class="tab-pane "></div>
+						<!--新闻舆情-->
+						<div id="nav-news" class="tab-pane "></div>
+					</div>
+				</div>
+				<!--右方侧栏-->
+				<div class="rightsidebar">
+					<!--访问量-->
+					<div class="module">
+					<!-- 
+						<div class="module-content">
+							<div class="count-data">
+								<p class="count-number" th:text="${dataMap.scanned}">1009</p>
+								<p>
+									<i class="iconfont icon-liulan"></i>浏览
+								</p>
+							</div>
+							<div class="count-data">
+								<p class="count-number" th:text="${dataMap.concerns}">64</p>
+								<p>
+									<i class="iconfont icon-guanzhu"></i>关注
+								</p>
+							</div>
+						</div>
+					 -->
+					</div>
+
+					<!--联系方式-->
+					<div class="module contact-info">
+						<div class="module-head">
+							<span>联系方式</span>
+						</div>
+						<div class="module-content">
+							<div class="contact-row">
+								<i class="iconfont icon-dianhua"></i>
+								<p th:text="${dataMap.telephone}">400-300-5000</p>
+							</div>
+							<div class="contact-row">
+								<i class="iconfont icon-youxiang"></i>
+								<p>
+									<a href="" th:text="${dataMap.email}">service@teleinfo.cn</a>
+								</p>
+							</div>
+							<div class="contact-row">
+								<i class="iconfont icon-didian"></i>
+								<p>
+									<span id="map-address" th:text="${dataMap.address}">北京市海淀区中关村翠湖科技园21号楼
+									</span> <a id="layer-map" href="javascript:void(0)">查看地图</a>
+								</p>
+							</div>
+							<div class="contact-row">
+								<i class="iconfont icon-fangzi-copy"></i>
+								<p>
+									<a href="" th:text="${dataMap.homePage}">www.teleinfo.cn</a>
+								</p>
+							</div>
+							<div class="contact-row">
+								<i class="iconfont icon-weixin"></i>
+								<p th:text="${dataMap.weixin}">泰尔英福</p>
+							</div>
+							<div class="contact-row">
+								<i class="iconfont icon-xinlang"></i>
+								<p th:text="${dataMap.sina}">泰尔英福</p>
+							</div>
+						</div>
+					</div>
+					<!--举报不良网站-->
+					<!--
+                    <div class="module">
+                        <div class="module-head">
+                            <span>举报不良网站</span>
+                        </div>
+                        <div class="module-content">
+                            <img class="" src="../static/images/bad-web.png?v=be74b49ebd" alt="举报不良网站">
+                            <a class="report-href" href="">点击举报不良网站</a>
+                        </div>
+                    </div>-->
+					<!--举报失信企业-->
+					<div class="module">
+						<div class="module-head">
+							<span>举报失信企业</span>
+						</div>
+						<div class="module-content">
+							<img class=""
+								src="../static/images/bad-company.png?v=deafac88ac?v=d83c369dc4"
+								alt="举报失信企业" /> <a
+								class="report-href" href="">点击举报失信企业</a>
+						</div>
+					</div>
+					<!--网站简介-->
+
+					<div class="right-banner"><a href="http://www.creditchina.gov.cn/">
+					<img src="../static/images/china-credit.png?v=01acbdcc0e"
+						  alt="信用中国" /></a>
+						
+					</div>
+					<div class="right-banner">
+					<!-- 
+						<img src="../static/images/china-bussiness.png?v=3001b11a39"
+						 alt="国家工商总局网监司" />
+				    -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer  th:include="fragments/footer :: footer"></footer>
+	
+    <!-- <div  th:include="fragments/footer :: js"></div> -->
+</body>
+</html>
+

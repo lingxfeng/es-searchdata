@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <meta name="renderer" content="webkit" />
+    <meta name="author" content="TeleInfo" />
+    <meta name="keywords" content="泰尔网信,泰尔信用,网站查询,域名查询,域名注册,搜官方,搜官网,网站靠谱,网站靠谱程度" />
+    <meta name="description" content="泰尔网信是网站信用认证和信息发布平台，提供最权威的网站可信查询服务，及全方位的域名注册查询服务。泰尔网信是全球首款采取地址栏发布专利技术的产品，通过中文顶级域名“.信息”，实现互联网地址全覆盖。在地址栏中，任意域名后输入“.信息”，即可访问域名背后信息。例如，访问网址：baidu.com.信息" />
+    <meta property="wb:webmaster" content="c9dafac5fb05ca50" />
+    <title>泰尔网信 – 信任，因为真实！</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Bootstrap -->
+    <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../static/css/main.min.css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_owrpqzhlni885mi.css" />
+</head>
+
+<body>
+<header>
+    <div class="container">
+        
+        <a class=" logo" href="./"> <img src="../static/images/logo.png" alt="logo" /> </a>
+        <div id="no-login" class="login-state">
+        <!--  
+            <a href="register.html">注册</a>
+            <a href="login.html">登录</a>
+            -->
+        </div>
+        <div id="already-login" class="login-state none">
+            <a id="user-center" href="javascript:void(0)"><span>您好，</span><span id="user-name">13396291152</span><span><i class="iconfont icon-xiala"></i></span></a>
+            <div id="header-list" class="header-list">
+                <i class="iconfont icon-xialalist"></i>
+                <ul>
+                    <li><a href="">我的网信</a></li>
+                    <li><a href="">我的关注</a></li>
+                    <li><a href="setting.html">账号设置</a></li>
+                    <li><a href="logout.html">退出登陆</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="main">
+    <div class="container">
+        <!--搜索栏  热搜词显示-->
+        <div class="module search-module">
+            <div class="module-content">
+                <div class="input-group search-wrap">
+                    <input type="text" name="content" id="content" class="form-control search-content"  value="" placeholder=" 请输入企业名称、注册号、人名、商品名等" th:attr="value=${content}"/>
+                    <input type="hidden" name="year1" id="year1"  value=""  th:attr="value=${before1year}"/>
+                    <input type="hidden" name="year5" id="year5"  value=""  th:attr="value=${before5year}"/>
+                    <input type="hidden" name="year10" id="year10"  value=""  th:attr="value=${before10year}"/>
+                    <input type="hidden" name="year15" id="year15"  value=""  th:attr="value=${before15year}"/>
+                    <span class="input-group-btn"> <button id="btn-search" class="btn btn-search">搜索</button> </span>
+                </div>
+                <div class="hot-word text-left">
+                    <span>热搜词：</span>
+                    <a href="http://阿里巴巴中国网络技术有限公司.信用.信息">阿里巴巴</a>
+                    <a href="http://小米科技有限责任公司.信用.信息">小米</a>
+                    <a href="http://腾讯科技深圳有限公司.信用.信息">腾讯</a>
+                    <a href="http://中国石油天然气集团公司.信用.信息">中石油</a>
+                    <a href="http://乐视网信息技术北京股份有限公司.信用.信息">乐视</a>
+                    <a href="http://北京京东世纪贸易有限公司.信用.信息">京东</a>
+                </div>
+            </div>
+        </div>
+        <div class="search-result">
+            <div class="left-content">
+                <!--筛选条件-->
+                 <div class="module">
+                    <div class="module-head">智能筛选
+                        <span class="pull-right btn-searchCondition" id="btn-searchCondition">收起筛选 
+                        	<i class="iconfont icon-shangsanjiao"></i>
+                        </span>
+                    </div>
+                    <div id="searchCondition" class="module-content p20">
+                    	<!-- 筛选条件开始 -->
+                        <div class="or_left_silde">
+                        
+                        	<!-- 注册资本开始 -->
+                            <div class="condition-row">
+                                <div class="condition-key">注册资本</div>
+                                <div id="condition-registerCaptial" class="condition-value">
+                                    <a href="javascript:void(0);" class="current"> 全部 </a>
+                                    <a href="javascript:void(0);"> 100万以下 </a>
+                                    <a href="javascript:void(0);"> 100-200万 </a>
+                                    <a href="javascript:void(0);"> 200-500万 </a>
+                                    <a href="javascript:void(0);"> 500-1000万 </a>
+                                    <a href="javascript:void(0);"> 1000万以上 </a>
+                                </div>
+                            </div>
+                            <!-- 注册资本结束 -->
+                            
+                            <!-- 成立年限开始 -->
+                            <div id="condition-formed" class="condition-row">
+                                <div class="condition-key">成立年限</div>
+                                <div class="condition-value">
+                                    <a href="javascript:void(0);"  class="current"> 全部 </a>
+                                    <a href="javascript:void(0);"> 1年以内 </a>
+                                    <a href="javascript:void(0);"> 1-5年 </a>
+                                    <a href="javascript:void(0);"> 5-10年 </a>
+                                    <a href="javascript:void(0);"> 10-15年 </a>
+                                    <a href="javascript:void(0);"> 15年以上 </a>
+                                </div>
+                            </div>
+                            <!-- 成立年限结束 -->
+                            
+                            <!-- 省份选择开始 -->
+                            <div class="condition-row">
+                                <div class="condition-key">省份区域</div>
+                                <div id="condition-provice" class="condition-value">
+                                    <span> <a href="javascript:void(0);"  class="current" value="qb">全部</a> </span>
+                                    <span> <a href="javascript:void(0);" value="ah">安徽</a> </span>
+                                    <span> <a href="javascript:void(0);" value="bj">北京</a> </span>
+                                    <span> <a href="javascript:void(0);" value="cq">重庆</a> </span>
+                                    <span> <a href="javascript:void(0);" value="fj">福建</a> </span>
+                                    <span> <a href="javascript:void(0);" value="gd">广东</a> </span>
+                                    <span> <a href="javascript:void(0);" value="gs">甘肃</a> </span>
+                                    <span> <a href="javascript:void(0);" value="gx">广西</a> </span>
+                                    <span> <a href="javascript:void(0);" value="gz">贵州</a> </span>
+                                    <div class="province-more none">
+                                        <span> <a href="javascript:void(0);" value="hb">河北</a> </span>
+                                        <span> <a href="javascript:void(0);" value="hb">湖北</a> </span>
+                                        <span> <a href="javascript:void(0);" value="hlj">黑龙江</a> </span>
+                                        <span> <a href="javascript:void(0);" value="hn">海南</a> </span>
+                                        <span> <a href="javascript:void(0);" value="hn">河南</a> </span>
+                                        <span> <a href="javascript:void(0);" value="hn">湖南</a> </span>
+                                        <span> <a href="javascript:void(0);" value="js">江苏</a> </span>
+                                        <span> <a href="javascript:void(0);" value="jl">吉林</a> </span>
+                                        <span> <a href="javascript:void(0);" value="jx">江西</a> </span>
+                                        <span> <a href="javascript:void(0);" value="ln">辽宁</a> </span>
+                                        <span> <a href="javascript:void(0);" value="nx">宁夏</a> </span>
+                                        <span> <a href="javascript:void(0);" value="nmg">内蒙古</a> </span>
+                                        <span> <a href="javascript:void(0);" value="qh">青海</a> </span>
+                                        <span> <a href="javascript:void(0);" value="sh">上海</a> </span>
+                                        <span> <a href="javascript:void(0);" value="sd">山东</a> </span>
+                                        <span> <a href="javascript:void(0);" value="sc">四川</a> </span>
+                                        <span> <a href="javascript:void(0);" value="sx">山西</a> </span>
+                                        <span> <a href="javascript:void(0);" value="sx">陕西</a> </span>
+                                        <span> <a href="javascript:void(0);" value="tj">天津</a> </span>
+                                        <span> <a href="javascript:void(0);" value="xz">西藏</a> </span>
+                                        <span> <a href="javascript:void(0);" value="xj">新疆</a> </span>
+                                        <span> <a href="javascript:void(0);" value="yn">云南</a> </span>
+                                        <span> <a href="javascript:void(0);" value="zj">浙江</a> </span>
+                                    </div>
+                                </div>
+                                <div id="btn-province-more" class="or_sl_more">
+                                    	更多<i class="iconfont icon-xiasanjiao"></i>
+                                </div>
+                            </div>
+                            <!-- 省份选择结束-->
+                        </div>
+                    </div>
+                </div>
+                <!-- 筛选条件结束 -->
+                
+                                
+                
+                
+                <div id="result-wrap" class="result-wrap none">
+                	 <!--搜索结果个数-->
+	                <div class="module">
+	                    <div id="results-counts"  class="module-content p20 results-counts">
+	                        	搜索 <span></span> 为你找到 <span></span> 家符合条件的企业
+	                    </div>
+	                </div>
+	                
+                 	<!--结果列表-->
+                	<div class="module">
+	                    <div class="result-list-head">
+	                        <span>企业</span>
+	                        <div class="focusd-status pull-right">关注</div>
+	                      	<div class="company-status pull-right">状态</div>
+	                    </div>
+	                    <div class="module-content p0">
+	                        <div id="resultList-wrap">
+	                        	<div id="result-list" class="result-list-content"></div>
+	                        	<div id="pagination-resultList" class="text-center"></div>
+	                        </div>
+	                        <div id="no-result" class="error-result none">未找到符合条件的查询结果，请更改关键词重新查询！</div>
+					        <div id="request-limit" class="error-result none">查询过于频繁，请稍后再试。</div>
+	                    </div>
+               		</div>
+                </div>
+                
+                <div id="loading-result" class="loading" style="width: 100%;height: 500px;background-color: #fff;position: relative;text-align: center;">
+				    <img style="width: 64px;margin: 100px auto;"  src="../static/images/loading.gif"  alt=""/>
+				</div>
+                
+                
+                
+            </div>
+             
+            <!--右方侧栏-->
+            <div class="rightsidebar">
+                <div class="module">
+                    <div class="module-head">浏览历史</div>
+                    <div class="module-content p0" id="history-list"></div>
+                </div>
+                <!--浏览历史-->
+                <div class="module">
+                    <div class="module-content">
+                        <div class="qr-code box-border">
+                            <div class="row">
+                                <div class="col-sm-6 ">
+                                    <img class="rightside-qrImg" src="../static/images/qr-code.png?v=9d8ff20487" alt="微信公众号二维码" />
+                                </div>
+                                <div class="col-sm-6 qr-code-word">
+                                    <p>扫微信二维码</p>
+                                    <p>关注公众账号</p>
+                                    <p>查询网站信息</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--微信二维码END-->
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="bottom-info">
+            <div class="web-info">
+                <div class="contact-title">
+                    关于我们
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="http://www.telecredit.cn/service.html#about" target="_blank" title="关于我们">关于我们</a>
+                            </div>
+                            <div class="col-sm-6 text-left">
+                                <a href="http://www.telecredit.cn/service.html#operate" target="_blank" title="运营机构">运营机构</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="http://www.telecredit.cn/service.html#privacy" target="_blank" title="隐私协议">隐私协议</a>
+                            </div>
+                            <div class="col-sm-6 text-left">
+                                <a href="http://www.telecredit.cn/service.html#help" target="_blank" title="帮助中心">帮助中心</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="http://www.telecredit.cn/service.html#opinition" target="_blank" title="意见反馈">意见反馈</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-title">
+                    联系我们
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        在线咨询：
+                        <a class="qq-service" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3474248181&amp;site=qq&amp;menu=yes"> <img src="../static/images/qq.png" alt="qq咨询" title="点击QQ咨询" /> </a>
+                    </div>
+                    <div class="col-sm-12">
+                        QQ群：371997390
+                    </div>
+                    <div class="col-sm-12">
+                        合作邮箱：
+                        <a href="mailto:telecredit@telecredit.cn">telecredit@teleinfo.cn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="data-source">
+                <div class="contact-title">
+                    数据来源
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        工业和信息化部ICP/IP地址/域名信息备案管理系统
+                    </div>
+                    <div class="col-sm-12">
+                        <span>全国企业信用公示系统</span>
+                        <span class="pull-right"> 全球域名注册数据库&nbsp;&nbsp; </span>
+                    </div>
+                    <div class="col-sm-12 ">
+                        网上名称《标识证书》公示平台
+                    </div>
+                </div>
+            </div>
+            <div class="code-img">
+                <div class="contact-title">
+                    微信公众号
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="../static/images/qr-code.png" alt="二维码" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right">
+        &copy; 版权所有：
+        <a href="http://www.caict.ac.cn" title="中国信息通信研究院" target="_blank">中国信息通信研究院（CAICT）</a>、
+        <a href="http://www.teleinfo.cn" title="北京泰尔英福网络科技有限责任公司" target="_blank">北京泰尔英福网络科技有限责任公司（TELEINFO）</a>
+    </div>
+</footer>
+    <script src="../static/js/lib/jquery.min.js" ></script>
+	<script src="../static/bootstrap/js/bootstrap.min.js" ></script>
+	<script src="../static/js/lib/layer/layer.js" ></script>
+	<script src="../static/js/lib/slick.js" ></script>
+	<script src="../static/js/lib/jquery.twbsPagination.min.js" ></script>
+	<script src="../static/js/result2.js"></script>
+</body>
+</html>

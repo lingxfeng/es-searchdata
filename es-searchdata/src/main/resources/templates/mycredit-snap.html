@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Cache-control" content="no-cache"/>
+	<meta http-equiv="Cache" content="no-cache"/>
+	<meta name="renderer" content="webkit"/>
+	<meta name="author" content="TeleInfo"/>
+	<meta name="keywords" content="泰尔网信,泰尔信用,网站查询,域名查询,域名注册,搜官方,搜官网,网站靠谱,网站靠谱程度"/>
+	<meta name="description" content="泰尔网信是网站信用认证和信息发布平台，提供最权威的网站可信查询服务，及全方位的域名注册查询服务。泰尔网信是全球首款采取地址栏发布专利技术的产品，通过中文顶级域名“.信息”，实现互联网地址全覆盖。在地址栏中，任意域名后输入“.信息”，即可访问域名背后信息。例如，访问网址：baidu.com.信息"/>
+	<meta property="wb:webmaster" content="c9dafac5fb05ca50"/>
+	<title>泰尔网信 – 信任，因为真实！</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+	<!-- Bootstrap -->
+	<link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../static/css/main.min.css"/>
+	<link rel="stylesheet" href="../static/iconfont/iconfont.css"/>
+	<link rel="stylesheet" href="../static/js/lib/dateTimePicker/bootstrap-datetimepicker.min.css"/>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<header>
+	<div class="container">
+		<a class=" logo" href="http://www.telecredit.cn">
+			<img src="../static/images/logo.png" alt="logo"/>
+		</a>
+		<div id="no-login" class="login-state none">
+			<a href="register.html">注册</a>
+			<a href="login.html">登录</a>
+		</div>
+		<div id="already-login" class="login-state">
+			<a id="user-center" href="javascript:void(0)">您好，18518135987 <i class="iconfont icon-xiala"></i></a>
+			<div id="header-list" class="header-list">
+				<i class="iconfont icon-xialalist"></i>
+				<ul>
+					<li><a href="">我的网信</a></li>
+					<li><a href="">我的关注</a></li>
+					<li><a href="setting.html">账号设置</a></li>
+					<li><a href="logout.html">退出登陆</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+<section class="main">
+	<div class="container">
+		<div class="leftsidebar box-shadow">
+			<nav>
+				<ul class="backstage-nav">
+					<li class="clearfix">
+						<div class="ower-name">阿里巴巴（中国）网络技术有限公司</div>
+						<div class="ower-nature">企业用户</div>
+					</li>
+					<li class="active">
+						<a href="mywebsite.html" data-title="我的网站">我的网站</a>
+					</li>
+					<li>
+						<a href="myfocus.html" data-title="我的关注">我的关注</a>
+					</li>
+					<li>
+						<a href="setting.html" data-title="账号设置">账号设置</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="right-content component mycredit">
+			<div class="component-head">我的网信</div>
+			<div class="mycredit-nav">
+				<a href="">联系方式</a>
+				<a class="active" href="">企业快照</a>
+				<a href="">信用标识</a>
+				<a href="">访问统计</a>
+				<a href="">用户管理</a>
+			</div>
+			<div class="component-content p0">
+				<div class="no-open">
+					<p>您尚未开通企业快照服务，请您先</p>
+					<a href="">开通服务</a>
+				</div>
+				<!--企业介绍-->
+				<div class="snap-column-box add-info-box">
+					<div class="column-head">企业介绍</div>
+					<div class="column-content">
+						<a class="center-block text-center" href="">+ 添加企业介绍</a>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">企业介绍</div>
+					<div class="column-content">
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">企业介绍</div>
+							<div class="snap-edit-row-body">
+								<div class="edit-uploadBanner-wrap upload-file-component">
+									<input id="editUpLoadBanner" class="none" type="file"/>
+									<label for="editUpLoadBanner">点击上传照片</label>
+									<p>支持JPG\JPEG\PNG格式，文件小于2M，尺寸为820*280</p>
+								</div>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">企业banner</div>
+							<div class="snap-edit-row-body">
+								<textarea name="" id="" placeholder="您可以在这里添加企业事件，字数控制在200字以内"></textarea>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">链接地址</div>
+							<div class="snap-edit-row-body">
+								<input class="input-block" type="text" placeholder="请输入URL地址"/>
+							</div>
+						</div>
+						<div class="snap-edit-btn-group">
+							<a class="btn-save-edit" href="">确定</a>
+							<a class="btn-concel-edit" href="">取消</a>
+						</div>
+					</div>
+				</div>
+				<!--展示企业介绍-->
+				<div class="snap-column-box add-info-box">
+					<div class="column-head">企业介绍</div>
+					<div class="column-content">
+						<a class="center-block text-center" href="">+ 添加企业介绍</a>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">企业介绍</div>
+					<div class="column-content">
+						<div class="snap-edit-row show-companyInfo">
+							<p>阿里巴巴集团的使命是让天下没有难做的生意。</p>
+							<p>我们为商家、品牌及其他提供产品、服务和数字内容的企业，提供基本的互联网基础设施以及营销平台，
+								让其可借助互联网的力量与用户和客户互动。我们的业务包括核心电商、云计算、数字媒体和娱乐以及创新项目和其他业务。我们并通过所投资的关联公司参与物流和本地服务行业。</p>
+							<p>我们旨在构建未来的商务生态系统。我们的愿景是让客户相会、工作和生活在阿里巴巴，并持续发</p>
+							<img src="../static/images.teleinfo/company-banner.png" alt=""/>
+						</div>
+					</div>
+				</div>
+
+				<!--发展历程-->
+				<div class="snap-column-box add-info-box">
+					<div class="column-head">发展历程</div>
+					<div class="column-content">
+						<a class="center-block text-center" href="">+ 添加发展历程</a>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">发展历程</div>
+					<div class="column-content">
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">日期</div>
+							<div class="snap-edit-row-body">
+								<input id="historyEventTimeDatePicker" type="text" placeholder="请选择日期"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">日期</div>
+							<div class="snap-edit-row-body">
+								<textarea name="" id="" placeholder="您可以在这里添加企业事件，字数控制在200字以内"></textarea>
+							</div>
+						</div>
+						<div class="snap-edit-btn-group">
+							<a class="btn-save-edit" href="">确定</a>
+							<a class="btn-concel-edit" href="">取消</a>
+						</div>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">发展历程</div>
+					<div class="show-company-history">
+						<div class="history-content-box">
+							<div class="history-time">2011-11-11</div>
+							<div class="history-event">阿里巴巴集团首次举办网商大会，期间举行首届十大网商颁奖店里</div>
+							<div class="edit-shade"><a href="javascript:void (0)">编辑</a></div>
+						</div>
+						<div class="history-content-box">
+							<div class="history-time">2011-11-11</div>
+							<div class="history-event">阿里巴巴集团首次举办网商大会，期间举行首届十大网商颁奖店里</div>
+							<div class="edit-shade"><a href="javascript:void (0)">编辑</a></div>
+						</div>
+					</div>
+				</div>
+
+				<!--实景照片-->
+				<div class="snap-column-box add-info-box">
+					<div class="column-head">实景照片</div>
+					<div class="column-content">
+						<a class="center-block text-center" href="">+ 添加实景照片</a>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">实景照片</div>
+					<div class="column-content">
+						<div class="snap-edit-row">
+							<div class="show-realImg-wrap">
+								<div class="realImg-box">
+									<img src="../static/images.teleinfo/company1.png" alt=""/>
+									<p>公司外景</p>
+									<div class="edit-shade"><a href="javascript:void (0)">编辑</a></div>
+								</div>
+								<div class="realImg-box">
+									<img src="../static/images.teleinfo/company1.png" alt=""/>
+									<p>公司外景</p>
+									<div class="edit-shade"><a href="javascript:void (0)">编辑</a></div>
+								</div>
+								<div class="realImg-box">
+									<img src="../static/images.teleinfo/company1.png" alt=""/>
+									<p>公司外景</p>
+									<div class="edit-shade"><a href="javascript:void (0)">编辑</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">实景照片</div>
+					<div class="column-content">
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">名称</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="图片分类"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">图片</div>
+							<div class="snap-edit-row-body">
+								<div class="realImg-upload-box upload-file-component">
+									<input type="file" id="editUpLoadRealImg"/>
+									<label for="editUpLoadRealImg">点击上传照片</label>
+									<p>支持JPG\JPEG\PNG格式，文件小于2M，尺寸为820*280</p>
+								</div>
+							</div>
+						</div>
+						<div class="snap-edit-btn-group">
+							<a class="btn-save-edit" href="">确定</a>
+							<a class="btn-concel-edit" href="">取消</a>
+						</div>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">实景照片</div>
+					<div class="column-content">
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">名称</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="图片分类"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">图片</div>
+							<div class="snap-edit-row-body">
+								<div class="reload-realImg-wrap">
+									<img src="../static/images.teleinfo/company1.png" alt=""/>
+									<div class="edit-reloadImg-box">
+										<div class="upload-file-component">
+											<input id="editReUpLoadRealImg" class="none" type="file"/>
+											<label for="editReUpLoadRealImg">重新上传</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="snap-edit-btn-group">
+							<a class="btn-save-edit" href="">确定</a>
+							<a class="btn-concel-edit" href="">取消</a>
+						</div>
+					</div>
+				</div>
+
+				<!--宣传视频-->
+				<div class="snap-column-box add-info-box">
+					<div class="column-head">宣传视频</div>
+					<div class="column-content">
+						<a class="center-block text-center" href="">+ 添加宣传视频</a>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">宣传视频</div>
+					<div class="column-content">
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">链接地址</div>
+							<div class="snap-edit-row-body">
+								<input class="input-block" type="text" placeholder="请输入视频地址"/>
+							</div>
+						</div>
+						<div class="snap-edit-btn-group">
+							<a class="btn-save-edit" href="">确定</a>
+							<a class="btn-concel-edit" href="">取消</a>
+						</div>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">宣传视频</div>
+					<div class="column-content">
+						<div class="snap-edit-row">
+							<embed src="http://player.youku.com/player.php/sid/XMzU1Mjg5NzQ0/v.swf" allowfullscreen="true" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"/>
+						</div>
+					</div>
+				</div>
+
+				<!--产品服务-->
+				<div class="snap-column-box add-info-box">
+					<div class="column-head">产品服务</div>
+					<div class="column-content">
+						<a class="center-block text-center" href="">+ 添加产品服务</a>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">产品服务</div>
+					<div class="column-content">
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">服务名称</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="请在此输入产品名称"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">服务介绍</div>
+							<div class="snap-edit-row-body">
+								<textarea name="" id="" placeholder="您可以在这里添加服务介绍，字数控制在200字以内"></textarea>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">服务类型</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="请在此输入产品类型"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">服务价格</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="请在此输入产品价格"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">服务图片</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="请在此输入产品价格"/>
+							</div>
+						</div>
+						<div class="snap-edit-btn-group">
+							<a class="btn-save-edit" href="">确定</a>
+							<a class="btn-concel-edit" href="">取消</a>
+						</div>
+					</div>
+				</div>
+
+				<!--资质荣誉-->
+				<div class="snap-column-box add-info-box">
+					<div class="column-head">资质荣誉</div>
+					<div class="column-content">
+						<a class="center-block text-center" href="">+ 添加资质荣誉</a>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">资质荣誉</div>
+					<div class="column-content">
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">证书名称</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="请在此输入证书名称"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">证书编号</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="请在此输入证书编号"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">颁发机构</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="请在此输入证书颁发机构"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">颁发时间</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="请在此输入证书颁发时间"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">证书图片</div>
+							<div class="snap-edit-row-body">
+								<textarea name="" id="" placeholder="您可以在这里添加企业事件，字数控制在200字以内"></textarea>
+							</div>
+						</div>
+						<div class="snap-edit-btn-group">
+							<a class="btn-save-edit" href="">确定</a>
+							<a class="btn-concel-edit" href="">取消</a>
+						</div>
+					</div>
+				</div>
+
+				<!--在线入口-->
+				<div class="snap-column-box add-info-box">
+					<div class="column-head">在线入口</div>
+					<div class="column-content">
+						<a class="center-block text-center" href="">+ 添加在线入口</a>
+					</div>
+				</div>
+				<div class="snap-column-box">
+					<div class="column-head">在线入口</div>
+					<div class="column-content">
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">入口类型</div>
+							<div class="snap-edit-row-body">
+								<select class="form-control">
+									<option value="">天猫</option>
+									<option value="">京东</option>
+									<option value="">一号店</option>
+									<option value="">当当</option>
+									<option value="">百度</option>
+									<option value="">其他</option>
+								</select>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">入口名称</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="请在此输入入口名称"/>
+							</div>
+						</div>
+						<div class="snap-edit-row">
+							<div class="snap-edit-row-title">入口地址</div>
+							<div class="snap-edit-row-body">
+								<input type="text" placeholder="请在此输入入口地址"/>
+							</div>
+						</div>
+						<div class="snap-edit-btn-group">
+							<a class="btn-save-edit" href="">确定</a>
+							<a class="btn-concel-edit" href="">取消</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!--<div>
+				<textarea id="editor_id" name="content" style="width:700px;height:300px;">
+				&lt;strong&gt;HTML内容&lt;/strong&gt;
+				</textarea>
+			</div>-->
+			<!--<button id="btn1">123</button>-->
+		</div>
+	</div>
+</section>
+
+<footer>
+	<div class="container">
+		<div class="bottom-info">
+			<div class="web-info">
+				<div class="contact-title">关于我们</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-6"><a href="http://www.telecredit.cn/service.html#about" target="_blank" title="关于我们">关于我们</a></div>
+							<div class="col-sm-6 text-left"><a href="http://www.telecredit.cn/service.html#operate" target="_blank" title="运营机构">运营机构</a></div>
+						</div>
+					</div>
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-6"><a href="http://www.telecredit.cn/service.html#privacy" target="_blank" title="隐私协议">隐私协议</a></div>
+							<div class="col-sm-6 text-left"><a href="http://www.telecredit.cn/service.html#help" target="_blank" title="帮助中心">帮助中心</a></div>
+						</div>
+					</div>
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-6"><a href="http://www.telecredit.cn/service.html#opinition" target="_blank" title="意见反馈">意见反馈</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contact-info">
+				<div class="contact-title">联系我们</div>
+				<div class="row">
+					<div class="col-sm-12">在线咨询：
+						<a class="qq-service" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3474248181&amp;site=qq&amp;menu=yes">
+							<img src="../static/images/qq.png" alt="qq咨询" title="点击QQ咨询"/>
+							
+						</a>
+					</div>
+					<div class="col-sm-12">QQ群：371997390</div>
+					<div class="col-sm-12">合作邮箱：<a href="mailto:telecredit@telecredit.cn">telecredit@teleinfo.cn</a></div>
+				</div>
+			</div>
+			<div class="data-source">
+				<div class="contact-title">数据来源</div>
+				<div class="row">
+					<div class="col-sm-12">工业和信息化部ICP/IP地址/域名信息备案管理系统</div>
+					<div class="col-sm-12">
+						<span>全国企业信用公示系统</span>
+						<span class="pull-right">
+                        全球域名注册数据库&nbsp;&nbsp;
+                    </span>
+					</div>
+					<div class="col-sm-12 ">网上名称《标识证书》公示平台</div>
+				</div>
+			</div>
+			<div class="code-img">
+				<div class="contact-title">微信公众号</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<img src="../static/images/qr-code.png" alt="二维码"/>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="copy-right">
+		&copy; 版权所有：<a href="http://www.caict.ac.cn" title="中国信息通信研究院" target="_blank">中国信息通信研究院（CAICT）</a>、
+		<a href="http://www.teleinfo.cn" title="北京泰尔英福网络科技有限责任公司" target="_blank">北京泰尔英福网络科技有限责任公司（TELEINFO）</a>
+	</div>
+</footer>
+<script src="../static/js/lib/jquery.min.js"></script>
+<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+<script src="../static/js/lib/layer/layer.js"></script>
+<script src="../static/js/backstages.min.js"></script>
+<!--<script src="../static/js/lib/kindeditor/kindeditor-min.js"></script>-->
+<script src="../static/js/lib/dateTimePicker/bootstrap-datetimepicker.min.js"></script>
+
+</body>
+</html>
+<script>
+//	KindEditor.ready(function(K) {
+//		var editor =  window.editor = K.create('#editor_id',{
+//			allowPreviewEmoticons : false,
+//			allowImageUpload : false,
+//			items : []
+//		});
+//		$("#btn1").click(function () {
+//			alert(editor.html())
+//		});
+//	});
+$('#historyEventTimeDatePicker').datetimepicker({
+	format: 'yyyy-mm-dd',
+	autoclose: true,
+	todayBtn: true,
+	minView:"month",
+	language:"de"
+});
+//	document.getElementById()
+</script>
